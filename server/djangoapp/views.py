@@ -84,7 +84,7 @@ def registration_request(request):
         password = request.POST["password"]
         confirmation = request.POST["confirmation"]
         if password != confirmation:
-            return render(request, "auctions/register.html", {
+            return render(request, "djangoapp/user_registration.html", {
                 "message": "Passwords must match."
             })
 
